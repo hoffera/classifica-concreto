@@ -1,6 +1,4 @@
-# Gerar o conteúdo do README.md como arquivo para download
 
-readme_content = """
 # 🧱 Classificador de Fissuras em Concreto
 
 Este é um aplicativo web construído com [Streamlit](https://streamlit.io/) que utiliza um modelo TensorFlow Lite para classificar **fissuras em concreto** como **positivas** (indicando presença de fissura relevante) ou **negativas** (sem fissura relevante), a partir de imagens fornecidas pelo usuário.
