@@ -11,7 +11,7 @@ import os
 @st.cache_resource
 def carrega_modelo():
     url = 'https://drive.google.com/uc?id=13q14tlNUio1yoiMvXHQMBs9x9HrnfmJY'
-    output = 'modelo_mosquitos.tflite'
+    output = 'modelo_engenharia.tflite'
 
     if not os.path.exists(output):
         gdown.download(url, output, quiet=False)
@@ -30,13 +30,13 @@ def carrega_imagem():
         image_data = uploaded_file.read()
         image = Image.open(io.BytesIO(image_data)).convert("RGB")
 
-        image = image.resize((224, 224)) 
+        image = image.resize((64, 64)) 
         st.image(image)
         st.success('Imagem foi carregada com sucesso')
 
         image = np.array(image, dtype=np.float32)
         image = image / 255.0
-        image = np.expand_dims(image, axis=0)  # (1, 224, 224, 3)
+        image = np.expand_dims(image, axis=0)  # (1, 64, 64, 3)
 
         return image
 
@@ -75,12 +75,12 @@ def previsao(interpreter, imagem):
 
 def main():
     st.set_page_config(
-        page_title="Classifica mosquito na pele humana",
-        page_icon="🦟",
+        page_title="Classifica Fissuras em Concreto",
+        page_icon="🧱",
 
     )
 
-    st.write("# Classifica mosquito na pele humana! 🦟")
+    st.write("# Classifica Fissuras em Concreto! 🧱")
 
 
     #Carrega modelo
