@@ -1,37 +1,25 @@
-🧱 Classificador de Fissuras em Concreto
-Este é um aplicativo web construído com Streamlit que utiliza um modelo TensorFlow Lite para classificar fissuras em concreto como positivas (indicando presença de fissura relevante) ou negativas (sem fissura relevante), a partir de imagens fornecidas pelo usuário.
+# Gerar o conteúdo do README.md como arquivo para download
 
-🔍 Funcionalidades
-Upload de imagens .png, .jpg ou .jpeg
+readme_content = """
+# 🧱 Classificador de Fissuras em Concreto
 
-Redimensionamento automático da imagem para o formato exigido pelo modelo
+Este é um aplicativo web construído com [Streamlit](https://streamlit.io/) que utiliza um modelo TensorFlow Lite para classificar **fissuras em concreto** como **positivas** (indicando presença de fissura relevante) ou **negativas** (sem fissura relevante), a partir de imagens fornecidas pelo usuário.
 
-Normalização dos dados da imagem (valores entre 0 e 1)
+## 🔍 Funcionalidades
 
-Classificação utilizando modelo .tflite
+- Upload de imagens `.png`, `.jpg` ou `.jpeg`
+- Redimensionamento automático da imagem para o formato exigido pelo modelo
+- Normalização dos dados da imagem (valores entre 0 e 1)
+- Classificação utilizando modelo `.tflite`
+- Exibição interativa das probabilidades com gráfico de barras (Plotly)
 
-Exibição interativa das probabilidades com gráfico de barras (Plotly)
+## 🧠 Modelo
 
-🧠 Modelo
-Formato: .tflite (TensorFlow Lite)
+- Formato: `.tflite` (TensorFlow Lite)
+- Tamanho da entrada: 64x64x3 (RGB)
+- Classes previstas:
+  - `positive` — Indica presença de fissura relevante
+  - `negative` — Indica ausência de fissura relevante
 
-Tamanho da entrada: 64x64x3 (RGB)
+O modelo é baixado automaticamente de um link do Google Drive:
 
-Classes previstas:
-
-positive — Indica presença de fissura relevante
-
-negative — Indica ausência de fissura relevante
-
-🖼️ Exemplo de Uso
-O usuário carrega uma imagem.
-
-A imagem é pré-processada e enviada ao modelo.
-
-O app retorna as probabilidades de cada classe:
-
-positive
-
-negative
-
-Um gráfico interativo exibe os resultados.
