@@ -20,16 +20,16 @@ Este é um aplicativo web construído com [Streamlit](https://streamlit.io/) que
   - `negative` — Indica ausência de fissura relevante
 
 ##  🖼️ Exemplo de Uso
-O usuário carrega uma imagem.
+- O usuário carrega uma imagem.
 
-A imagem é pré-processada e enviada ao modelo.
+- A imagem é pré-processada e enviada ao modelo.
 
-O app retorna as probabilidades de cada classe:
+- O app retorna as probabilidades de cada classe:
 
-positive
+  - positive
 
-negative
+  - negative
 
-Um gráfico interativo exibe os resultados.
+- Um gráfico interativo exibe os resultados.
   
 
