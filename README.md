@@ -19,5 +19,17 @@ Este é um aplicativo web construído com [Streamlit](https://streamlit.io/) que
   - `positive` — Indica presença de fissura relevante
   - `negative` — Indica ausência de fissura relevante
 
-O modelo é baixado automaticamente de um link do Google Drive:
+##  🖼️ Exemplo de Uso
+O usuário carrega uma imagem.
+
+A imagem é pré-processada e enviada ao modelo.
+
+O app retorna as probabilidades de cada classe:
+
+positive
+
+negative
+
+Um gráfico interativo exibe os resultados.
+  
 
